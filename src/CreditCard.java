@@ -36,4 +36,14 @@ public class CreditCard {
     public void setActive(boolean active) {
         this.active = active;
     }
+
+    @Override
+    public String toString() {
+        return "CreditCard{" +
+                "number=" + number +
+                ", limit=" + limit +
+                ", balance=" + balance +
+                ", active=" + active +
+                '}';
+    }
 }

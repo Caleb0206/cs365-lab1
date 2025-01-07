@@ -12,6 +12,6 @@ public class Main {
         OwnershipCollection owns = new OwnershipCollection();
         owns.createOwnership(abby, card1);
 
-        System.out.println(owns.getByCustomer(coll.getCustomer(0).getID()));
+        System.out.println(owns.getByCustomer(0));
     }
 }
