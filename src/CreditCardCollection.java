@@ -7,7 +7,7 @@ public class CreditCardCollection {
     {
         cards.put(card.getNumber(), card);
     }
-    public CreditCard getCatd(int num)
+    public CreditCard getCard(int num)
     {
         if(cards.containsKey(num))
             return cards.get(num);

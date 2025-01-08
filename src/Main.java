@@ -9,9 +9,25 @@ public class Main {
         CreditCard card1 = new CreditCard(1234567, 5000, 0);
         CreditCardCollection cards = new CreditCardCollection();
         cards.addCard(card1);
-        OwnershipCollection owns = new OwnershipCollection();
-        owns.createOwnership(abby, card1);
 
-        System.out.println(owns.getByCustomer(0));
+
+        OwnershipCollection owns = new OwnershipCollection(coll, cards);
+        owns.createOwnership(abby, card1);
+        //dual ownership
+        owns.createOwnership(dustin, card1);
+        card1.setActive(true);
+
+
+        owns.printCreditCardByCustomerId(0);
+        Vender macys = new Vender("Macys", "Newark");
+        VenderCollection venders = new VenderCollection();
+        venders.addVender(macys);
+
+        Transaction tra = new Transaction("2025-01-01", 0, 1234567, 0);
+        TransactionCollection transactions = new TransactionCollection(cards);
+        transactions.addTransaction(tra, 99.99);
+        transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-02-02");
+
+//        System.out.println(owns.getByCustomer("44").);
     }
 }

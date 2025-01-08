@@ -1,9 +1,17 @@
 public class Payment {
     private String date;
-    private String cardNum;
+    private int cardNum;
 
-    public Payment(String date, String cardNum) {
+    public Payment(String date, int cardNum) {
         this.date = date;
         this.cardNum = cardNum;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public int getCardNum() {
+        return cardNum;
     }
 }

@@ -39,11 +39,11 @@ public class CreditCard {
 
     @Override
     public String toString() {
-        return "CreditCard{" +
-                "number=" + number +
-                ", limit=" + limit +
-                ", balance=" + balance +
-                ", active=" + active +
+        String formatBalance = "$%.2f";
+        return "CreditCard " + number +
+                ", limit = $" + limit +
+                ", balance = " + String.format(formatBalance, balance) +
+                ", active = " + active +
                 '}';
     }
 }
