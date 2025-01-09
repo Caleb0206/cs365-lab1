@@ -10,6 +10,7 @@ public class Customer {
         this.ssn = ssn;
         this.name = name;
         this.address = address;
+        this.phone = phone;
     }
     /** sets the ID of customer */
     public void setId(int id) {

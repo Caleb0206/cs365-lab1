@@ -15,4 +15,13 @@ public class Vender {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Vender{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                '}';
+    }
 }

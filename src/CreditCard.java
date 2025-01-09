@@ -43,7 +43,6 @@ public class CreditCard {
         return "CreditCard " + number +
                 ", limit = $" + limit +
                 ", balance = " + String.format(formatBalance, balance) +
-                ", active = " + active +
-                '}';
+                ", active = " + active;
     }
 }

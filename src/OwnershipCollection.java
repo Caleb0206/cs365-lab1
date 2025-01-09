@@ -24,6 +24,7 @@ public class OwnershipCollection {
         {
             ownerships.remove(cancelled);
             cancelled.setCurrent(false);
+            cardCollection.getCard(cardNum).setActive(false);
             ownerships.add(cancelled); // add the inactive ownership back to set
         }
     }

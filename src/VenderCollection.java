@@ -8,4 +8,10 @@ public class VenderCollection {
         shop.setId(id_counter++);
         venders.put(shop.getId(), shop);
     }
+    public void printVenders() {
+        for (Vender v : venders.values())
+        {
+            System.out.println(v);
+        }
+    }
 }
