@@ -56,19 +56,38 @@ public class Main {
         System.out.println();
 
         // Create a new transaction
-        Transaction tra = new Transaction("2025-01-01", 0, 1234567, 0);
-        TransactionCollection transactions = new TransactionCollection(cards);
-        transactions.addTransaction(tra, 99.99);
-        System.out.println("Creating a new transaction of $99.99.");
-        transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-02-02");
-        owns.printCreditCardByCustomerId(1); // see card status by printing Cards owned by owner 1
-        System.out.println();
+        Transaction tra1 = new Transaction("2025-01-01", 0, 1234567, 0);
 
+        TransactionCollection transactions = new TransactionCollection(cards);
+        transactions.addTransaction(tra1, 99.99);
+        System.out.println("Creating a new transaction of $99.99 from user 0 on card 1234567");
+        System.out.print("\t");
+        owns.printCreditCardByCustomerId(0); // see card status by printing Cards
+
+        System.out.println("Printing transactions of 1234567 between 2024-12-12 and 2025-02-02");
+        System.out.print("\t");
+        transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-02-02");
+
+        Transaction tra2 = new Transaction("2025-04-01", 1, 1234567, 0);
+        System.out.println("Creating a new transaction of $20.00 from user 1 on card 1234567.");
+        transactions.addTransaction(tra2, 20);
+        System.out.print("\t");
+        owns.printCreditCardByCustomerId(0);
+
+        System.out.println("Printing transactions of 1234567 between 2024-12-12 and 2025-02-02");
+        System.out.print("\t");
+        transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-02-02");
+
+        System.out.println("Printing transactions of 1234567 between 2024-12-12 and 2025-04-02");
+        System.out.print("\t");
+        transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-04-02");
+
+        System.out.println();
         // Make a payment to card 1234567
         Payment pay1 = new Payment("2025-01-12", 1234567);
         PaymentCollection payments = new PaymentCollection(cards);
-        payments.addPayment(pay1, 88.0);
-        System.out.println("After payment of $88.00");
+        payments.addPayment(pay1, 50.0);
+        System.out.println("After payment of $50.00");
         owns.printCreditCardByCustomerId(0);
     }
     public static void main(String[] args) {

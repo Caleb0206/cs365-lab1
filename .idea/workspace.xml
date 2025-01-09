@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e93107e-48f7-4d0e-b5e6-a160c9785540" name="Changes" comment="more implementation for transactions,ownerships">
+    <list default="true" id="5e93107e-48f7-4d0e-b5e6-a160c9785540" name="Changes" comment="changes to Main for easier read and other small fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CreditCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CreditCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OwnershipCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OwnershipCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VenderCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VenderCollection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,12 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1736320661730</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changes to Main for easier read and other small fixes">
+      <option name="closed" value="true" />
+      <created>1736405446568</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736405446568</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created all classes, needs implementation" />
     <MESSAGE value="more implementation for transactions,ownerships" />
-    <option name="LAST_COMMIT_MESSAGE" value="more implementation for transactions,ownerships" />
+    <MESSAGE value="changes to Main for easier read and other small fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes to Main for easier read and other small fixes" />
   </component>
 </project>
