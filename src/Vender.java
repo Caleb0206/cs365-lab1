@@ -18,7 +18,7 @@ public class Vender {
 
     @Override
     public String toString() {
-        return "Vender{" +
+        return "Vender {" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", location='" + location + '\'' +

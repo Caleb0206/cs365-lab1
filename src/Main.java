@@ -56,9 +56,8 @@ public class Main {
         System.out.println();
 
         // Add a new vendor
-        Vender macys = new Vender("Macys", "Newark");
         VenderCollection venders = new VenderCollection();
-        venders.addVender(macys);
+        venders.createVender("Macys", "123 Main St., Seattle, Washington");
         System.out.println("Adding a new vendor!");
         venders.printVenders(); // just to see vender was created
         System.out.println();
@@ -83,7 +82,7 @@ public class Main {
         owns.printByCard(1234567);
 //        owns.printCreditCardByCustomerId(0);
         System.out.println();
-        
+
         System.out.println("Printing transactions of 1234567 between 2024-12-12 and 2025-02-02");
 //        System.out.print("\t");
         transactions.printTransactionsBetweenDates(1234567, "2024-12-12", "2025-02-02");
@@ -100,5 +99,7 @@ public class Main {
         System.out.println("After payment of $50.00");
 //        owns.printCreditCardByCustomerId(0);
         owns.printByCard(1234567);
+
+        System.out.println();
     }
 }
