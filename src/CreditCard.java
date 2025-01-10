@@ -1,17 +1,20 @@
 public class CreditCard {
-    private int number;
-    private enum cardType {
+    public enum CardType {
         Visa,
         MC,
         American_Express,
         Discover
     }
+
+    private int number;
+    private CardType type;
     private int limit;
     private double balance;
     private boolean active;
 
-    public CreditCard(int number, int limit, double balance) {
+    public CreditCard(int number, CardType type, int limit, double balance) {
         this.number = number;
+        this.type = type;
         this.limit = limit;
         this.balance = balance;
         active = false;
@@ -41,6 +44,7 @@ public class CreditCard {
     public String toString() {
         String formatBalance = "$%.2f";
         return "CreditCard " + number +
+                ", type=" + type +
                 ", limit = $" + limit +
                 ", balance = " + String.format(formatBalance, balance) +
                 ", active = " + active;
