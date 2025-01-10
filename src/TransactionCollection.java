@@ -10,6 +10,11 @@ public class TransactionCollection {
         this.cardCollection = cardCollection;
     }
 
+    public void createTransaction(String date, int customerId, int cardNum, int venderId, double cost) {
+        Transaction transaction = new Transaction(date, customerId, cardNum, venderId);
+        addTransaction(transaction, cost);
+    }
+
     public void addTransaction(Transaction tr, double cost) {
         transactions.add(tr);
         CreditCard card = cardCollection.getCard(tr.getCardNum());

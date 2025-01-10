@@ -32,6 +32,14 @@ public class CreditCard {
         this.balance = balance;
     }
 
+    public int getLimit() {
+        return limit;
+    }
+
+    public CardType getType() {
+        return type;
+    }
+
     public boolean isActive() {
         return active;
     }
