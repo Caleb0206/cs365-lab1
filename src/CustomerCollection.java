@@ -2,10 +2,12 @@ import java.util.HashMap;
 
 public class CustomerCollection {
     static int id_counter = 0;
-    private HashMap<Integer, Customer> customers;
+    private HashMap<Integer, Customer> customersByID;
+    private HashMap<String, Customer> customersBySSN;
 
     public CustomerCollection() {
-        customers = new HashMap<>();
+        customersByID = new HashMap<>();
+        customersBySSN = new HashMap<>();
     }
 
     public void createCustomer(String ssn, String name, String address, String phone) {
@@ -15,19 +17,17 @@ public class CustomerCollection {
 
     public void addCustomer(Customer buyer) {
         buyer.setId(id_counter++);
-        customers.put(buyer.getID(), buyer);
+        customersByID.put(buyer.getID(), buyer);
+        customersBySSN.put(buyer.getSSN(), buyer);
     }
 
     public Customer getById(int id) {
-        return customers.get(id);
+        return customersByID.get(id);
     }
 
+    //change
     public Customer getBySSN(String ssn) {
-        for (Customer customer : customers.values()) {
-            if (customer.getSSN().equals(ssn))
-                return customer;
-        }
-        return null;
+        return customersBySSN.get(ssn);
     }
 
 
